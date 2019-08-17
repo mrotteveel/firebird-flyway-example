@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'nl.lawinegevaar'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.firebirdsql.jdbc:jaybird-jdk18:3.0.6'
+    implementation 'org.flywaydb:flyway-core:6.0.0'
+}
+
+application {
+    mainClassName = 'nl.lawinegevaar.firebird.flyway.example.Main'
+}
